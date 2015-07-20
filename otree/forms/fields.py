@@ -3,8 +3,11 @@ from easymoney import to_dec
 from . import widgets
 
 
-__all__ = ('CurrencyField', 'CurrencyChoiceField', 'RealWorldCurrencyField')
+__all__ = ('TypedChoiceField', 'CurrencyField', 'CurrencyChoiceField',
+           'RealWorldCurrencyField')
 
+class TypedChoiceField(forms.TypedChoiceField):
+    widget = widgets.RadioSelect
 
 class BaseCurrencyField(forms.DecimalField):
 

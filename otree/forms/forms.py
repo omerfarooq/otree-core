@@ -28,6 +28,7 @@ from otree.db import models
 __all__ = (
     'formfield_callback', 'modelform_factory', 'BaseModelForm', 'ModelForm')
 
+TypedChoiceField = fields.TypedChoiceField
 
 FORMFIELD_OVERRIDES = FLOPPYFORMS_FORMFIELD_OVERRIDES.copy()
 
@@ -36,77 +37,78 @@ FORMFIELD_OVERRIDES.update({
 
     models.BigIntegerField: {
         'form_class': forms.IntegerField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     # Binary field is never editable, so we don't need to convert it.
+
     models.BooleanField: {
         'form_class': forms.BooleanField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.CharField: {
         'form_class': forms.CharField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.CommaSeparatedIntegerField: {
         'form_class': forms.CharField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.DateField: {
         'form_class': forms.DateField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.DateTimeField: {
         'form_class': forms.DateTimeField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.DecimalField: {
         'form_class': forms.DecimalField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.EmailField: {
         'form_class': forms.EmailField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.FileField: {
         'form_class': forms.FileField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.FilePathField: {
         'form_class': forms.FilePathField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.FloatField: {
         'form_class': forms.FloatField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.IntegerField: {
         'form_class': forms.IntegerField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.GenericIPAddressField: {
         'form_class': forms.GenericIPAddressField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.PositiveIntegerField: {
         'form_class': forms.IntegerField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.PositiveSmallIntegerField: {
         'form_class': forms.IntegerField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.SlugField: {
         'form_class': forms.SlugField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.SmallIntegerField: {
         'form_class': forms.IntegerField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.TextField: {
         'form_class': forms.CharField,
         'widget': forms.Textarea,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.TimeField: {
         'form_class': forms.TimeField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.URLField: {
         'form_class': forms.URLField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.ManyToManyField: {
         'form_class': forms.ModelMultipleChoiceField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.OneToOneField: {
         'form_class': forms.ModelChoiceField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
 
     # Other custom db fields used in otree.
     models.RandomCharField: {
         'form_class': forms.CharField,
-        'choices_form_class': forms.TypedChoiceField},
+        'choices_form_class': TypedChoiceField},
     models.CurrencyField: {
         'form_class': fields.CurrencyField,
         'choices_form_class': fields.CurrencyChoiceField},
