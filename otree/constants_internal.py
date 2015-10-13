@@ -39,7 +39,7 @@ admin_access_code = 'admin_access_code'
 index_in_pages = 'index_in_pages'
 
 timeout_seconds = 'timeout_seconds'
-auto_submit = 'auto_submit'
+auto_submit = 'auto_submit_fix'
 check_auto_submit = 'check_auto_submit'
 page_expiration_times = 'page_timeouts'
 participant_label = 'participant_label'
